@@ -107,7 +107,12 @@ cd /path/to/remote/directory
 put -r /path/to/your/local/project
 ```
 
-(Note: If you encounter file access issues during transfer, ensure the appropriate permissions are set as shown earlier.)
+(Note: If you encounter file access issues during transfer, ensure the appropriate permissions by running the below commands)
+```bash
+sudo chown ubuntu: /home/ubuntu/path_to_project
+sudo chmod u+w /home/ubuntu/path_to_project
+
+```
 
 ---
 
@@ -171,9 +176,11 @@ Once the inbound rules of our instance have been adjusted, you can directly acce
 ---
 
 By following this comprehensive guide, you've learned how to set up an EC2 instance, transfer your code, create Docker images, and deploy your Streamlit application using Docker containers and Nginx load balancing. Make sure to replace placeholders with actual values relevant to your setup, and ensure proper permissions and security configurations are in place for your EC2 instance. This deployment technique offers isolation, scalability, and portability, streamlining your application deployment process.
+---
 
-Additionally, if you're using PowerShell 7 or above, you can take advantage of SSH and SFTP directly in your terminal, eliminating the need for external tools like FileZilla or Putty.
-
-Now, armed with this knowledge, you're ready to unleash the full potential of modern deployment strategies!
+Notes:
+- If you're using PowerShell 7 or above, you can take advantage of SSH and SFTP directly in your terminal,
+  eliminating the need for external tools like FileZilla(for SFTP) or Putty(for SSH).
+- 
 
 ---
