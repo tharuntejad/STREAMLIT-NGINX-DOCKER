@@ -1,7 +1,7 @@
 
 ---
 
-# Purchasing and Activating and Installing SSL Certificates
+# Purchasing , Activating and Installing SSL Certificates
 
 To secure your application with HTTPS, you must have a valid domain name (e.g., www.yourdomain.com) and the ability to change its DNS records. If you meet these criteria, you can proceed with the following steps:
 - If you already have ssl certificates(.crt and .key files) please feel free to skip first 2 steps
