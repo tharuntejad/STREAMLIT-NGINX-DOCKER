@@ -66,7 +66,7 @@ Note: DNS changes may take a few minutes or up to an hour to propagate. Once pro
 
 Once activated, make sure to download the .crt certificate. This certificate is your SSL certificate, and you'll need to install it.
 
-**Note**: Remove your domain name from the end of the CNAME Name field. For example, if your CNAME Name looks like "_5a97e9d61040dae8e6f5bdf49ff24e80.yourdomain.in," remove ".yourdomain.in."
+**Note**: Remove your domain name from the end of the CNAME Name field. For example, if your CNAME Name looks like "_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.yourdomain.com," remove ".yourdomain.com."
 
 Here is the improved and properly formatted installation guide for SSL certificates on an Nginx container:
 
