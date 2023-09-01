@@ -75,8 +75,8 @@ Here is the improved and properly formatted installation guide for SSL certifica
 ## 3. Installing SSL Certificates
 
 Your .crt and .key files together constitute SSL certificates, and these certificates must be installed on your Nginx, load balancers, or Apache servers to serve applications over HTTPS. Here are the steps to install them on our Nginx container, which we use to load balance multiple Streamlit apps. Make sure to follow these steps carefully:
-- generally .crt and .key files by themselves are sufficient for installation but some servers may require some additional steps , even after following these steps you will ultimately end with the same 2 files .crt and .key
-- 
+- Generally .crt and .key files by themselves are sufficient for installation but some servers may require some additional steps , even after following these steps you will ultimately end with the same 2 files .crt and .key
+- If you are not sure whether the .crt generated and .key are not related , you can easily verify them online or by using openssl commands on linux
 1. **Update Docker Compose Configuration**:
 
    - Inside the `ssl` folder, you will find updated `docker-compose.yml` and `nginx.conf` files. Replace the original `docker-compose.yml` and `nginx.conf` files located outside the `ssl` folder with these updated versions.
