@@ -68,9 +68,6 @@ Once activated, make sure to download the .crt certificate. This certificate is 
 
 **Note**: Remove your domain name from the end of the CNAME Name field. For example, if your CNAME Name looks like "_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.yourdomain.com," remove ".yourdomain.com."
 
-Here is the improved and properly formatted installation guide for SSL certificates on an Nginx container:
-
----
 
 ## 3. Installing SSL Certificates
 
