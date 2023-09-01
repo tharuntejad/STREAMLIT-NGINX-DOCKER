@@ -4,7 +4,7 @@
 # Purchasing and Activating and Installing SSL Certificates
 
 To secure your application with HTTPS, you must have a valid domain name (e.g., www.yourdomain.com) and the ability to change its DNS records. If you meet these criteria, you can proceed with the following steps:
-
+- If you already have ssl certificates(.crt and .key files) please feel free to skip first 2 steps
 ## 1. Purchase an SSL Certificate
 
 1. Visit a domain hosting website (e.g., GoDaddy, Namecheap) and purchase an SSL certificate that matches your requirements (DV, EV, OV).
@@ -75,7 +75,8 @@ Here is the improved and properly formatted installation guide for SSL certifica
 ## 3. Installing SSL Certificates
 
 Your .crt and .key files together constitute SSL certificates, and these certificates must be installed on your Nginx, load balancers, or Apache servers to serve applications over HTTPS. Here are the steps to install them on our Nginx container, which we use to load balance multiple Streamlit apps. Make sure to follow these steps carefully:
-
+- generally .crt and .key files by themselves are sufficient for installation but some servers may require some additional steps , even after following these steps you will ultimately end with the same 2 files .crt and .key
+- 
 1. **Update Docker Compose Configuration**:
 
    - Inside the `ssl` folder, you will find updated `docker-compose.yml` and `nginx.conf` files. Replace the original `docker-compose.yml` and `nginx.conf` files located outside the `ssl` folder with these updated versions.
