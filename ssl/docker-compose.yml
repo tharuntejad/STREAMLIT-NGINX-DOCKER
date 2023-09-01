@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  streamlit_app_1:
+    image: stest
+    environment:
+        - PORT=8501
+        - ENV_TYPE=dev
+    networks:
+      - backend
+
+  streamlit_app_2:
+    image: stest
+    environment:
+      - PORT=8502
+      - ENV_TYPE=dev
+    networks:
+      - backend
+
+  streamlit_app_3:
+    image: stest
+    environment:
+      - PORT=8503
+      - ENV_TYPE=dev
+    networks:
+      - backend
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx_prod.conf:/etc/nginx/nginx.conf # mount nginx.conf file
+      - ./ssl_cert/skccs_in.crt:/etc/nginx/ssl/skccs_in.crt    # Mount the SSL certificate directory
+      - ./ssl_cert/skccs_in.key:/etc/nginx/ssl/skccs_in.key
+    ports:
+      - "443:443"
+    networks:
+      - backend
+    depends_on:
+      - streamlit_app_1
+      - streamlit_app_2
+      - streamlit_app_3
+
+networks:
+  backend:
