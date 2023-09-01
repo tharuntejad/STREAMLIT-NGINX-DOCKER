@@ -28,9 +28,9 @@ services:
   nginx:
     image: nginx:latest
     volumes:
-      - ./nginx_prod.conf:/etc/nginx/nginx.conf # mount nginx.conf file
-      - ./ssl_cert/skccs_in.crt:/etc/nginx/ssl/skccs_in.crt    # Mount the SSL certificate directory
-      - ./ssl_cert/skccs_in.key:/etc/nginx/ssl/skccs_in.key
+      - ./nginx.conf:/etc/nginx/nginx.conf # mount nginx.conf file
+      - ./ssl/yourdomain.crt:/etc/nginx/ssl/yourdomain.crt    # Mount the SSL certificate files
+      - ./ssl/yourdomain.key:/etc/nginx/ssl/yourdomain.key
     ports:
       - "443:443"
     networks:
